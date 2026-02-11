@@ -1,0 +1,156 @@
+/* Global Dark Glassmorphic Theme */
+
+/* Global font family for entire website */
+* {
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+}
+
+/* Dark theme base */
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Glassmorphic effect utilities */
+.glass {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Override Mantine Paper components with glassmorphic style */
+.mantine-Paper-root {
+  background: rgba(26, 26, 26, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+/* Override Mantine Card components */
+.mantine-Card-root {
+  background: rgba(26, 26, 26, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.mantine-Card-root:hover {
+  background: rgba(26, 26, 26, 0.85) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.1) !important;
+}
+
+/* Text colors */
+.mantine-Title-root {
+  color: #ffffff !important;
+}
+
+.mantine-Text-root {
+  color: #aaaaaa !important;
+}
+
+/* Input fields glassmorphic */
+.mantine-TextInput-input,
+.mantine-Textarea-input,
+.mantine-Select-input {
+  background: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.mantine-TextInput-input:focus,
+.mantine-Textarea-input:focus,
+.mantine-Select-input:focus {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.1) !important;
+}
+
+.mantine-TextInput-label,
+.mantine-Textarea-label,
+.mantine-Select-label {
+  color: #aaaaaa !important;
+}
+
+/* Buttons */
+.mantine-Button-root {
+  background: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+}
+
+.mantine-Button-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Code blocks */
+pre {
+  background: rgba(10, 10, 10, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem !important;
+}
+
+code {
+  color: #F59E0B !important;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.5);
+}
+
+/* Ensure dark theme */
+* {
+  color-scheme: dark;
+}
+
+/* Links */
+a {
+  color: #F59E0B;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fbbf24;
+}
+
+/* Selection */
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #ffffff;
+}
+
