@@ -114,7 +114,7 @@ export default function GradientGeneratorPage() {
                 background: {gradientCSS};
               </Text>
             </div>
-            <CopyButton value={`background: ${gradientCSS};`} />
+            <CopyButton text={`background: ${gradientCSS};`} />
           </Group>
         </Paper>
       </Stack>

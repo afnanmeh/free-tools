@@ -35,7 +35,7 @@ export default function ContactPage() {
           </div>
 
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
-            <Paper shadow="sm" padding="xl" radius="lg" style={{ border: '1px solid #e2e8f0' }}>
+            <Paper shadow="sm" p="xl" radius="lg" style={{ border: '1px solid #e2e8f0' }}>
               <Stack gap="xl">
                 <div>
                   <Title order={2} style={{ color: '#1e293b', fontSize: '1.8rem', marginBottom: '1rem' }}>
@@ -98,7 +98,7 @@ export default function ContactPage() {
             </Paper>
 
             <Stack gap="lg">
-              <Paper shadow="sm" padding="xl" radius="lg" style={{ border: '1px solid #e2e8f0' }}>
+              <Paper shadow="sm" p="xl" radius="lg" style={{ border: '1px solid #e2e8f0' }}>
                 <Stack gap="lg">
                   <div>
                     <Title order={3} style={{ color: '#1e293b', fontSize: '1.5rem', marginBottom: '1rem' }}>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 </Stack>
               </Paper>
 
-              <Paper shadow="sm" padding="xl" radius="lg" style={{ border: '1px solid #e2e8f0' }}>
+              <Paper shadow="sm" p="xl" radius="lg" style={{ border: '1px solid #e2e8f0' }}>
                 <Stack gap="md">
                   <Title order={3} style={{ color: '#1e293b', fontSize: '1.3rem' }}>
                     Frequently Asked

@@ -35,12 +35,12 @@ export default function TimeDifferenceCalculatorPage() {
       <Stack gap="xl">
         <Stack gap="md">
           <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>START DATE & TIME</div>
-          <DateTimePicker value={date1} onChange={setDate1} size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
+          <DateTimePicker value={date1} onChange={(value) => setDate1(value as Date | null)} size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
         </Stack>
 
         <Stack gap="md">
           <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>END DATE & TIME</div>
-          <DateTimePicker value={date2} onChange={setDate2} size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
+          <DateTimePicker value={date2} onChange={(value) => setDate2(value as Date | null)} size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
         </Stack>
 
         <Button onClick={handleCalculate} size="lg" style={{ backgroundColor: '#7c00f0' }}>CALCULATE DIFFERENCE</Button>

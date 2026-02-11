@@ -1,0 +1,19 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Host
+Host: https://freetools.com
+
+# Sitemaps
+Sitemap: https://freetools.com/sitemap.xml

@@ -80,7 +80,7 @@ export default function ColorConverterPage() {
               style={{ flex: 1 }}
               styles={{ input: { backgroundColor: '#111', border: '2px solid #00d4ff', color: '#fff', fontSize: '16px' } }}
             />
-            <CopyButton value={hex} />
+            <CopyButton text={hex} />
           </Group>
         </Stack>
 
@@ -90,7 +90,7 @@ export default function ColorConverterPage() {
             <NumberInput value={r} onChange={(val) => updateFromRgb(Number(val) || 0, g, b)} min={0} max={255} label="R" size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #ff00aa', color: '#fff' } }} />
             <NumberInput value={g} onChange={(val) => updateFromRgb(r, Number(val) || 0, b)} min={0} max={255} label="G" size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #ff00aa', color: '#fff' } }} />
             <NumberInput value={b} onChange={(val) => updateFromRgb(r, g, Number(val) || 0)} min={0} max={255} label="B" size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #ff00aa', color: '#fff' } }} />
-            <CopyButton value={`rgb(${r}, ${g}, ${b})`} />
+            <CopyButton text={`rgb(${r}, ${g}, ${b})`} />
           </Group>
         </Stack>
 
@@ -100,7 +100,7 @@ export default function ColorConverterPage() {
             <NumberInput value={h} onChange={(val) => updateFromHsl(Number(val) || 0, s, l)} min={0} max={360} label="H" size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
             <NumberInput value={s} onChange={(val) => updateFromHsl(h, Number(val) || 0, l)} min={0} max={100} label="S" size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
             <NumberInput value={l} onChange={(val) => updateFromHsl(h, s, Number(val) || 0)} min={0} max={100} label="L" size="lg" styles={{ input: { backgroundColor: '#111', border: '2px solid #7c00f0', color: '#fff' } }} />
-            <CopyButton value={`hsl(${h}, ${s}%, ${l}%)`} />
+            <CopyButton text={`hsl(${h}, ${s}%, ${l}%)`} />
           </Group>
         </Stack>
       </Stack>

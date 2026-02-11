@@ -102,7 +102,7 @@ export default function PaletteExporterPage() {
           <Paper style={{ backgroundColor: '#111', border: '2px solid #7c00f0', padding: '1.5rem' }}>
             <Group justify="space-between" align="flex-start" style={{ marginBottom: '1rem' }}>
               <Text style={{ color: '#7c00f0', fontWeight: 700 }}>EXPORTED CODE</Text>
-              <CopyButton value={exported} />
+              <CopyButton text={exported} />
             </Group>
             <Paper style={{ backgroundColor: '#000', border: '1px solid #222', padding: '1rem', overflowX: 'auto' }}>
               <pre style={{ color: '#fff', fontFamily: 'monospace', fontSize: '0.9rem', margin: 0, whiteSpace: 'pre-wrap' }}>

@@ -77,7 +77,7 @@ export default function ColorPaletteGeneratorPage() {
                 <Paper key={i} style={{ backgroundColor: color, border: '2px solid #222', padding: '3rem 1rem', textAlign: 'center', position: 'relative' }}>
                   <div style={{ position: 'absolute', bottom: '1rem', left: '50%', transform: 'translateX(-50%)', width: '90%' }}>
                     <Text style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', textShadow: '0 0 4px #000', marginBottom: '0.5rem' }}>{color}</Text>
-                    <CopyButton value={color} />
+                    <CopyButton text={color} />
                   </div>
                 </Paper>
               ))}
