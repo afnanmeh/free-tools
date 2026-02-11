@@ -74,9 +74,7 @@ export function Footer() {
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Contact</Text>
               </Link>
-              <Link href="/blog" style={{ textDecoration: 'none' }}>
                 <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Blog</Text>
-              </Link>
             </Stack>
 
             
