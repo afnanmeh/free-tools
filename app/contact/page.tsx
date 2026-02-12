@@ -117,7 +117,7 @@ export default function ContactPage() {
                         </ThemeIcon>
                         <div>
                           <Text style={{ color: '#1e293b', fontWeight: 700, fontSize: '1rem' }}>Email</Text>
-                          <Text style={{ color: '#667eea', fontSize: '0.95rem' }}>support@freetools.com</Text>
+                          <Text style={{ color: '#667eea', fontSize: '0.95rem' }}>support@toolsey.org</Text>
                         </div>
                       </Group>
                     </Paper>
@@ -141,7 +141,7 @@ export default function ContactPage() {
                         </ThemeIcon>
                         <div>
                           <Text style={{ color: '#1e293b', fontWeight: 700, fontSize: '1rem' }}>Twitter</Text>
-                          <Text style={{ color: '#64748b', fontSize: '0.95rem' }}>@freetools</Text>
+                          <Text style={{ color: '#64748b', fontSize: '0.95rem' }}>@toolsey</Text>
                         </div>
                       </Group>
                     </Paper>

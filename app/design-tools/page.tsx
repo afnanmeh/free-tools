@@ -5,7 +5,7 @@ import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
 
 export const metadata = {
-  title: 'UI/UX Design Tools - Free Online Tools',
+  title: 'UI/UX Design Tools - Toolsey',
   description: 'Free color tools for designers and developers. Palette generators, color converters, contrast checkers, and more.',
 };
 

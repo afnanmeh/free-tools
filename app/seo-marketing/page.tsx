@@ -5,7 +5,7 @@ import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
 
 export const metadata = {
-  title: 'SEO & Marketing Tools - Free Online Tools',
+  title: 'SEO & Marketing Tools - Toolsey',
   description: 'SEO optimization, meta tags, UTM tracking, and content analysis tools for marketers and SEO professionals',
 };
 

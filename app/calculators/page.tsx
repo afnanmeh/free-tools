@@ -5,7 +5,7 @@ import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
 
 export const metadata = {
-  title: 'Calculators - Free Online Tools',
+  title: 'Calculators - Toolsey',
   description: 'Business, tech, SEO, and general purpose calculators for developers and marketers',
 };
 

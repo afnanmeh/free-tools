@@ -3,7 +3,7 @@ import { ToolLayout } from '@/components/layout/ToolLayout';
 import { IconFileText } from '@tabler/icons-react';
 
 export const metadata = {
-  title: 'Terms of Service - Free Online Tools',
+  title: 'Terms of Service - Toolsey',
   description: 'Terms of service for using our free online tools.',
 };
 

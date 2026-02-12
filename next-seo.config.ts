@@ -1,30 +1,30 @@
 import { DefaultSeoProps } from 'next-seo';
 
 const config: DefaultSeoProps = {
-  titleTemplate: '%s | Free Tools',
-  defaultTitle: 'Free Online Tools - 95+ Developer, Marketing & Design Tools',
+  titleTemplate: '%s | Toolsey',
+  defaultTitle: 'Toolsey - 95+ Free Online Tools for Developers, Marketers & Designers',
   description: 'Free online tools for developers, marketers, and designers. JSON formatter, JWT decoder, regex tester, SEO tools, calculators, color tools. No signup required.',
-  canonical: 'https://freetools.com',
+  canonical: 'https://toolsey.org',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://freetools.com',
-    siteName: 'Free Tools',
-    title: 'Free Online Tools - 95+ Developer, Marketing & Design Tools',
+    url: 'https://toolsey.org',
+    siteName: 'Toolsey',
+    title: 'Toolsey - 95+ Free Online Tools for Developers, Marketers & Designers',
     description: 'Free online tools for developers, marketers, and designers. JSON formatter, JWT decoder, regex tester, SEO tools, calculators, color tools. No signup required.',
     images: [
       {
-        url: 'https://freetools.com/og-image.png',
+        url: 'https://toolsey.org/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Free Online Tools - Developer, Marketing & Design Tools',
+        alt: 'Toolsey - Free Online Tools for Developers, Marketers & Designers',
         type: 'image/png',
       },
     ],
   },
   twitter: {
-    handle: '@freetools',
-    site: '@freetools',
+    handle: '@toolsey',
+    site: '@toolsey',
     cardType: 'summary_large_image',
   },
   additionalMetaTags: [

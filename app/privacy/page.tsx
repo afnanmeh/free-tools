@@ -3,7 +3,7 @@ import { ToolLayout } from '@/components/layout/ToolLayout';
 import { IconShieldCheck } from '@tabler/icons-react';
 
 export const metadata = {
-  title: 'Privacy Policy - Free Online Tools',
+  title: 'Privacy Policy - Toolsey',
   description: 'Our privacy policy explains how we handle your data. Spoiler: We don\'t collect any data.',
 };
 

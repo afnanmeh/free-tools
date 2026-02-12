@@ -6,17 +6,17 @@ import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
 
 export const metadata: Metadata = {
-  title: 'Developer Tools - Free Online Tools',
+  title: 'Developer Tools - Toolsey',
   description: 'Free developer tools including JSON formatter, JWT decoder, regex tester, and code utilities. All tools work offline in your browser for maximum privacy.',
-  keywords: ['developer tools', 'json formatter', 'jwt decoder', 'regex tester', 'code formatter', 'json validator', 'css minifier'],
+  keywords: ['developer tools', 'json formatter', 'jwt decoder', 'regex tester', 'code formatter', 'json validator', 'css minifier', 'toolsey'],
   openGraph: {
-    title: 'Developer Tools - Free Online Tools',
+    title: 'Developer Tools - Toolsey',
     description: 'Free developer tools including JSON formatter, JWT decoder, regex tester, and code utilities. All tools work offline in your browser.',
-    url: 'https://freetools.com/dev-tools',
+    url: 'https://toolsey.org/dev-tools',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://freetools.com/dev-tools',
+    canonical: 'https://toolsey.org/dev-tools',
   },
 };
 
@@ -32,13 +32,13 @@ export default function DevToolsPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://freetools.com'
+        item: 'https://toolsey.org'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Developer Tools',
-        item: 'https://freetools.com/dev-tools'
+        item: 'https://toolsey.org/dev-tools'
       }
     ]
   };
@@ -48,9 +48,9 @@ export default function DevToolsPage() {
     '@type': 'CollectionPage',
     name: 'Developer Tools',
     description: 'Free developer tools including JSON formatter, JWT decoder, regex tester, and code utilities.',
-    url: 'https://freetools.com/dev-tools',
+    url: 'https://toolsey.org/dev-tools',
     isPartOf: {
-      '@id': 'https://freetools.com/#website'
+      '@id': 'https://toolsey.org/#website'
     }
   };
 
