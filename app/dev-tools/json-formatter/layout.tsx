@@ -54,7 +54,7 @@ export default function JsonFormatterLayout({
 
   const faqSchema = seoData?.faqs ? generateFAQSchema(seoData.faqs) : null;
 
-  const schemas = [breadcrumbSchema, webAppSchema];
+  const schemas: object[] = [breadcrumbSchema, webAppSchema];
   if (faqSchema) schemas.push(faqSchema);
 
   return (
