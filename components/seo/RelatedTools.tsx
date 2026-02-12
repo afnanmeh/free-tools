@@ -25,7 +25,12 @@ export function RelatedTools({ currentToolId, category, limit = 6 }: RelatedTool
       </Title>
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg">
         {relatedTools.map((tool) => (
-          <ToolCard key={tool.id} tool={tool} />
+          <ToolCard 
+            key={tool.id} 
+            title={tool.name}
+            description={tool.description}
+            href={tool.path}
+          />
         ))}
       </SimpleGrid>
     </Box>
