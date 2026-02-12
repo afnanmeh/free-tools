@@ -11,14 +11,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@mantine/core": "^7.5.0",
+    "@mantine/carousel": "^8.3.14",
+    "@mantine/core": "^8.3.14",
     "@mantine/dates": "^8.3.14",
-    "@mantine/hooks": "^7.5.0",
+    "@mantine/hooks": "^8.3.14",
     "@monaco-editor/react": "^4.6.0",
     "@tabler/icons-react": "^3.36.1",
     "@vercel/analytics": "^1.6.1",
     "dayjs": "^1.11.19",
     "echarts": "^5.5.0",
+    "embla-carousel-react": "^8.6.0",
     "js-yaml": "^4.1.0",
     "jsonwebtoken": "^9.0.2",
     "next": "14.1.0",

@@ -1,0 +1,225 @@
+.relatedToolsSection {
+  position: relative;
+  padding: 80px 0;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.navButton {
+  background: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
+  color: #ffffff;
+  flex-shrink: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.navButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+.carousel {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel :global(.mantine-Carousel-viewport) {
+  overflow: hidden;
+}
+
+.carousel :global(.mantine-Carousel-container) {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.carousel :global(.mantine-Carousel-slide) {
+  flex: 0 0 280px;
+  min-width: 280px;
+  max-width: 280px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.toolCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolCard:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2);
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconSection {
+  padding: 24px 24px 0 24px;
+  text-align: center;
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.content {
+  padding: 20px 24px 24px 24px;
+  text-align: center;
+}
+
+.toolName {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.toolDescription {
+  color: #b0b0b0 !important;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  min-height: 40px;
+}
+
+.arrowIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+  transition: all 0.3s ease;
+  margin: 12px auto 0;
+}
+
+.toolCard:hover .arrowIcon {
+  border-color: #F59E0B;
+  background: rgba(245, 158, 11, 0.2);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .relatedToolsSection {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .carouselWrapper {
+    gap: 12px;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .carousel {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .iconWrapper {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  .toolName {
+    font-size: 16px;
+  }
+  
+  .toolDescription {
+    font-size: 13px;
+  }
+}

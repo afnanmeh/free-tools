@@ -1,0 +1,110 @@
+.useCasesSection {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.02) 0%, transparent 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.useCaseCard {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.useCaseCard:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
+}
+
+.checkmark {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.useCaseText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #d0d0d0;
+  margin: 0;
+  padding-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .useCasesSection {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .useCaseCard {
+    padding: 16px 20px;
+  }
+}

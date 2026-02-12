@@ -19,7 +19,7 @@ export function ToolHeader({ title, description, breadcrumbs }: ToolHeaderProps)
         border: '1px solid rgba(255, 255, 255, 0.1)',
         borderRadius: '1.5rem',
         padding: '2.5rem',
-        marginBottom: '2rem',
+        margin: '4rem 0 4rem 0',
       }}
     >
       <Stack gap="md">
