@@ -1,11 +1,14 @@
 import { Container, Title, Text, Stack, Paper, Divider } from '@mantine/core';
 import { ToolLayout } from '@/components/layout/ToolLayout';
 import { IconShieldCheck } from '@tabler/icons-react';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata = {
-  title: 'Privacy Policy - Toolsey',
-  description: 'Our privacy policy explains how we handle your data. Spoiler: We don\'t collect any data.',
-};
+export const metadata = generateMetadata({
+  title: 'Privacy Policy',
+  description: 'Toolsey privacy policy. All tools run in your browser with zero data collection. Your data never leaves your device.',
+  path: '/privacy',
+  keywords: ['privacy policy', 'data protection', 'privacy', 'security'],
+});
 
 export default function PrivacyPage() {
   return (

@@ -1,11 +1,14 @@
-import { Container, Title, Text, Stack, Paper, TextInput, Textarea, Button, SimpleGrid, ThemeIcon, Group } from '@mantine/core';
+import { Container, Title, Text, Stack, Paper, TextInput, Textarea, Button, SimpleGrid, ThemeIcon, Group, Anchor } from '@mantine/core';
 import { ToolLayout } from '@/components/layout/ToolLayout';
 import { IconMail, IconBrandGithub, IconBrandTwitter, IconMessageCircle, IconSend } from '@tabler/icons-react';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata = {
-  title: 'Contact Us - Free Online Tools',
-  description: 'Get in touch with us. We\'d love to hear from you!',
-};
+export const metadata = generateMetadata({
+  title: 'Contact Us',
+  description: 'Get in touch with Toolsey for support, feedback, or suggestions. We\'re here to help with any questions about our free online tools.',
+  path: '/contact',
+  keywords: ['contact', 'support', 'feedback', 'help'],
+});
 
 export default function ContactPage() {
   return (

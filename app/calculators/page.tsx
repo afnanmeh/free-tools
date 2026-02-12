@@ -3,11 +3,14 @@ import { ToolHeader } from '@/components/tool/ToolHeader';
 import { ToolLayout } from '@/components/layout/ToolLayout';
 import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata = {
-  title: 'Calculators - Toolsey',
-  description: 'Business, tech, SEO, and general purpose calculators for developers and marketers',
-};
+export const metadata = generateMetadata({
+  title: 'Calculators',
+  description: 'Business, SaaS, and marketing calculators. Calculate MRR, churn, LTV, CAC, ROI, break-even, and more. Free tools for developers and marketers.',
+  path: '/calculators',
+  keywords: ['calculators', 'business calculators', 'saas metrics', 'mrr calculator', 'roi calculator', 'break-even calculator'],
+});
 
 export default function CalculatorsPage() {
   const category = CATEGORIES['calculators'];

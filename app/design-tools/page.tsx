@@ -3,11 +3,14 @@ import { ToolHeader } from '@/components/tool/ToolHeader';
 import { ToolLayout } from '@/components/layout/ToolLayout';
 import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata = {
-  title: 'UI/UX Design Tools - Toolsey',
-  description: 'Free color tools for designers and developers. Palette generators, color converters, contrast checkers, and more.',
-};
+export const metadata = generateMetadata({
+  title: 'UI/UX Design Tools',
+  description: 'Free color tools for designers and developers. Palette generators, color converters, contrast checkers, gradient generators, and accessibility tools.',
+  path: '/design-tools',
+  keywords: ['design tools', 'color tools', 'palette generator', 'contrast checker', 'gradient generator', 'accessibility'],
+});
 
 export default function DesignToolsPage() {
   const category = CATEGORIES['design-tools'];

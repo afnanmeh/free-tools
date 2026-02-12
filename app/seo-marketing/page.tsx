@@ -3,11 +3,14 @@ import { ToolHeader } from '@/components/tool/ToolHeader';
 import { ToolLayout } from '@/components/layout/ToolLayout';
 import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata = {
-  title: 'SEO & Marketing Tools - Toolsey',
-  description: 'SEO optimization, meta tags, UTM tracking, and content analysis tools for marketers and SEO professionals',
-};
+export const metadata = generateMetadata({
+  title: 'SEO & Marketing Tools',
+  description: 'SEO optimization, meta tags, UTM tracking, and content analysis tools for marketers and SEO professionals. Boost your online presence with free tools.',
+  path: '/seo-marketing',
+  keywords: ['seo tools', 'marketing tools', 'meta tags', 'utm builder', 'content analysis', 'seo optimization'],
+});
 
 export default function SeoMarketingPage() {
   const category = CATEGORIES['seo-marketing'];

@@ -70,9 +70,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://toolsey.org/#organization',
+    name: 'Toolsey',
+    url: 'https://toolsey.org',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://toolsey.org/logo.png',
+      width: 512,
+      height: 512
+    },
+    sameAs: [
+      'https://twitter.com/toolsey',
+      'https://github.com/toolsey'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'support@toolsey.org',
+      contactType: 'Customer Support'
+    }
+  };
+
+  const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://toolsey.org/#website',
     name: 'Toolsey',
     url: 'https://toolsey.org',
     description: 'Free online tools for developers, marketers, and designers',
@@ -85,19 +109,7 @@ export default function RootLayout({
       'query-input': 'required name=search_term_string'
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Toolsey',
-      url: 'https://toolsey.org',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://toolsey.org/logo.png',
-        width: 512,
-        height: 512
-      },
-      sameAs: [
-        'https://twitter.com/toolsey',
-        'https://github.com/toolsey'
-      ]
+      '@id': 'https://toolsey.org/#organization'
     }
   };
 
@@ -115,7 +127,11 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>

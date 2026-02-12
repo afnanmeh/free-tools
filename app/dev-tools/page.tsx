@@ -4,21 +4,14 @@ import { ToolLayout } from '@/components/layout/ToolLayout';
 import { ToolHeader } from '@/components/tool/ToolHeader';
 import { ToolCard } from '@/components/tool/ToolCard';
 import { CATEGORIES, getToolsByCategory } from '@/config/tools.config';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata: Metadata = {
-  title: 'Developer Tools - Toolsey',
+export const metadata: Metadata = generateMetadata({
+  title: 'Developer Tools',
   description: 'Free developer tools including JSON formatter, JWT decoder, regex tester, and code utilities. All tools work offline in your browser for maximum privacy.',
-  keywords: ['developer tools', 'json formatter', 'jwt decoder', 'regex tester', 'code formatter', 'json validator', 'css minifier', 'toolsey'],
-  openGraph: {
-    title: 'Developer Tools - Toolsey',
-    description: 'Free developer tools including JSON formatter, JWT decoder, regex tester, and code utilities. All tools work offline in your browser.',
-    url: 'https://toolsey.org/dev-tools',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://toolsey.org/dev-tools',
-  },
-};
+  path: '/dev-tools',
+  keywords: ['developer tools', 'json formatter', 'jwt decoder', 'regex tester', 'code formatter', 'json validator', 'css minifier'],
+});
 
 export default function DevToolsPage() {
   const category = CATEGORIES['dev-tools'];

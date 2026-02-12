@@ -1,11 +1,14 @@
 import { Container, Title, Text, Stack, Paper, Divider } from '@mantine/core';
 import { ToolLayout } from '@/components/layout/ToolLayout';
 import { IconFileText } from '@tabler/icons-react';
+import { generateMetadata } from '@/lib/seo/metadata';
 
-export const metadata = {
-  title: 'Terms of Service - Toolsey',
-  description: 'Terms of service for using our free online tools.',
-};
+export const metadata = generateMetadata({
+  title: 'Terms of Service',
+  description: 'Terms of service for using Toolsey free online tools. Simple, fair terms for using our developer, marketing, and design tools.',
+  path: '/terms',
+  keywords: ['terms of service', 'terms', 'legal', 'usage terms'],
+});
 
 export default function TermsPage() {
   return (
