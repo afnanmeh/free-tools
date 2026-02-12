@@ -16,6 +16,7 @@
     "@mantine/hooks": "^7.5.0",
     "@monaco-editor/react": "^4.6.0",
     "@tabler/icons-react": "^3.36.1",
+    "@vercel/analytics": "^1.6.1",
     "dayjs": "^1.11.19",
     "echarts": "^5.5.0",
     "js-yaml": "^4.1.0",
