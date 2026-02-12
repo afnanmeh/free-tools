@@ -6,16 +6,16 @@ import { Metadata } from 'next';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://freetools.com'),
+  metadataBase: new URL('https://toolsey.org'),
   title: {
-    default: 'Free Online Tools - 95+ Developer, Marketing & Design Tools',
-    template: '%s | Free Tools'
+    default: 'Toolsey - 95+ Free Online Tools for Developers, Marketers & Designers',
+    template: '%s | Toolsey'
   },
   description: 'Free online tools for developers, marketers, and designers. JSON formatter, JWT decoder, regex tester, SEO tools, calculators, color tools. No signup required.',
-  keywords: ['free tools', 'developer tools', 'online tools', 'json formatter', 'jwt decoder', 'regex tester', 'seo tools', 'calculators', 'color tools', 'design tools'],
-  authors: [{ name: 'Free Tools' }],
-  creator: 'Free Tools',
-  publisher: 'Free Tools',
+  keywords: ['free tools', 'developer tools', 'online tools', 'json formatter', 'jwt decoder', 'regex tester', 'seo tools', 'calculators', 'color tools', 'design tools', 'toolsey'],
+  authors: [{ name: 'Toolsey' }],
+  creator: 'Toolsey',
+  publisher: 'Toolsey',
   robots: {
     index: true,
     follow: true,
@@ -36,28 +36,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://freetools.com',
-    title: 'Free Online Tools - 95+ Developer, Marketing & Design Tools',
+    url: 'https://toolsey.org',
+    title: 'Toolsey - 95+ Free Online Tools for Developers, Marketers & Designers',
     description: 'Free online tools for developers, marketers, and designers. JSON formatter, JWT decoder, regex tester, SEO tools, calculators, color tools. No signup required.',
-    siteName: 'Free Tools',
+    siteName: 'Toolsey',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://toolsey.org/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Free Online Tools - Developer, Marketing & Design Tools',
+        alt: 'Toolsey - Free Online Tools for Developers, Marketers & Designers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Online Tools - 95+ Developer, Marketing & Design Tools',
+    title: 'Toolsey - 95+ Free Online Tools for Developers, Marketers & Designers',
     description: 'Free online tools for developers, marketers, and designers. JSON formatter, JWT decoder, regex tester, SEO tools, calculators, color tools.',
-    images: ['/og-image.png'],
-    creator: '@freetools',
+    images: ['https://toolsey.org/og-image.png'],
+    creator: '@toolsey',
   },
   alternates: {
-    canonical: 'https://freetools.com',
+    canonical: 'https://toolsey.org',
   },
   verification: {
     google: 'your-google-verification-code',
@@ -73,30 +73,30 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Free Tools',
-    url: 'https://freetools.com',
+    name: 'Toolsey',
+    url: 'https://toolsey.org',
     description: 'Free online tools for developers, marketers, and designers',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://freetools.com/?q={search_term_string}'
+        urlTemplate: 'https://toolsey.org/?q={search_term_string}'
       },
       'query-input': 'required name=search_term_string'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Free Tools',
-      url: 'https://freetools.com',
+      name: 'Toolsey',
+      url: 'https://toolsey.org',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://freetools.com/logo.png',
+        url: 'https://toolsey.org/logo.png',
         width: 512,
         height: 512
       },
       sameAs: [
-        'https://twitter.com/freetools',
-        'https://github.com/freetools'
+        'https://twitter.com/toolsey',
+        'https://github.com/toolsey'
       ]
     }
   };

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://freetools.com',
+  siteUrl: process.env.SITE_URL || 'https://toolsey.org',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/api/*', '/admin/*', '/server-sitemap.xml'],
@@ -23,7 +23,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://freetools.com/sitemap.xml',
+      'https://toolsey.org/sitemap.xml',
     ],
   },
   transform: async (config, path) => {

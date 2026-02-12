@@ -13,7 +13,7 @@ User-agent: Bingbot
 Allow: /
 
 # Host
-Host: https://freetools.com
+Host: https://toolsey.org
 
 # Sitemaps
-Sitemap: https://freetools.com/sitemap.xml
+Sitemap: https://toolsey.org/sitemap.xml

@@ -842,17 +842,17 @@ export default function HomePage() {
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://freetools.com/#webpage",
-    url: "https://freetools.com",
-    name: "Free Online Tools - 95+ Developer, Marketing & Design Tools",
+    "@id": "https://toolsey.org/#webpage",
+    url: "https://toolsey.org",
+    name: "Toolsey - 95+ Free Online Tools for Developers, Marketers & Designers",
     description:
       "Free online tools for developers, marketers, and designers. JSON formatter, JWT decoder, regex tester, SEO tools, calculators, color tools. No signup required.",
     isPartOf: {
-      "@id": "https://freetools.com/#website",
+      "@id": "https://toolsey.org/#website",
     },
     about: {
       "@type": "SoftwareApplication",
-      name: "Free Tools",
+      name: "Toolsey",
       applicationCategory: "DeveloperApplication",
       offers: {
         "@type": "Offer",
@@ -867,7 +867,7 @@ export default function HomePage() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://freetools.com",
+          item: "https://toolsey.org",
         },
       ],
     },

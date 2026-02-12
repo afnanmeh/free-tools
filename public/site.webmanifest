@@ -1,0 +1,23 @@
+{
+  "name": "Toolsey - Free Online Tools",
+  "short_name": "Toolsey",
+  "description": "95+ free online tools for developers, marketers, and designers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03060C",
+  "theme_color": "#F59E0B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["productivity", "utilities", "developer tools"],
+  "orientation": "portrait-primary"
+}
