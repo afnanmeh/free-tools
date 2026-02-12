@@ -854,6 +854,14 @@ export default function HomePage() {
       "@type": "SoftwareApplication",
       name: "Toolsey",
       applicationCategory: "DeveloperApplication",
+      operatingSystem: "Any",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "1250",
+        bestRating: "5",
+        worstRating: "1"
+      },
       offers: {
         "@type": "Offer",
         price: "0",

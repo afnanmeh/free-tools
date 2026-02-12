@@ -17,7 +17,7 @@ export function Footer() {
               <Flex align="center" justify="flex-start" gap="sm">
                 <IconSettings size={30} color="#F59E0B" />
                 <Text style={{ color: '#F59E0B', fontWeight: 900, fontSize: '1.2rem', }}>
-                  FREE TOOLS
+                  TOOLSEY
                 </Text>
               </Flex>
               <Text style={{ color: '#aaaaaa', fontSize: '0.95rem', lineHeight: 1.6 }}>
@@ -101,7 +101,7 @@ export function Footer() {
                 }}
               />
               <Text style={{ color: '#aaaaaa', fontSize: '10rem', fontWeight: 900 }}>
-                Free Tools
+                TOOLSEY
               </Text>
             </Flex>
 
@@ -109,7 +109,7 @@ export function Footer() {
 
             <Group justify="flex-end" style={{ position: 'relative', zIndex: 1 }}>
               <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }}>
-                &copy; {currentYear} Free Tools. All rights reserved.
+                &copy; {currentYear} toolsey. All rights reserved.
               </Text>
  
             </Group>

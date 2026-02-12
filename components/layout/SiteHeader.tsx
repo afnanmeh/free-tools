@@ -60,7 +60,7 @@ export function SiteHeader() {
                   letterSpacing: '-0.5px',
                 }}
               >
-                FREETOOLS
+                TOOLSEY
               </Title>
             </Link>
             
