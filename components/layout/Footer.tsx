@@ -15,7 +15,7 @@ export function Footer() {
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="xl">
             <Stack gap="md">
               <Flex align="center" justify="flex-start" gap="sm">
-                <IconSettings size={  30} color="#F59E0B" />
+                <IconSettings size={30} color="#F59E0B" />
                 <Text style={{ color: '#F59E0B', fontWeight: 900, fontSize: '1.2rem', }}>
                   FREE TOOLS
                 </Text>
@@ -25,7 +25,7 @@ export function Footer() {
               </Text>
             </Stack>
 
-            <Stack ml={90} gap="sm">
+            <Stack gap="sm" className="footer-column">
               <Text style={{ color: '#ffffff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
                 CATEGORIES
               </Text>
@@ -43,7 +43,7 @@ export function Footer() {
               </Link>
             </Stack>
 
-            <Stack ml={90} gap="sm">
+            <Stack gap="sm" className="footer-column">
               <Text style={{ color: '#ffffff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
                 POPULAR TOOLS
               </Text>
@@ -61,7 +61,7 @@ export function Footer() {
               </Link>
             </Stack>
 
-            <Stack ml={90} gap="sm">
+            <Stack gap="sm" className="footer-column">
               <Text style={{ color: '#ffffff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
                 ABOUT
               </Text>
@@ -121,6 +121,16 @@ export function Footer() {
         .footer-link:hover {
           color: #F59E0B !important;
           transition: color 0.2s ease;
+        }
+
+        @media (max-width: 768px) {
+          .footer-column {
+            margin-left: 0 !important;
+          }
+          
+          footer {
+            padding: 2rem 0 1rem !important;
+          }
         }
       `}</style>
     </footer>

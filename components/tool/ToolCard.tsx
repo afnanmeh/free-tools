@@ -2,14 +2,17 @@
 
 import { Card, Title, Text, Stack } from '@mantine/core';
 import Link from 'next/link';
+import { TOOL_ICONS } from '@/config/tool-icons';
 
 interface ToolCardProps {
   title: string;
   description: string;
   href: string;
+  iconName?: string;
 }
 
-export function ToolCard({ title, description, href }: ToolCardProps) {
+export function ToolCard({ title, description, href, iconName }: ToolCardProps) {
+  const Icon = iconName ? TOOL_ICONS[iconName] : null;
   return (
     <Link href={href} style={{ textDecoration: 'none' }}>
       <Card
@@ -39,6 +42,9 @@ export function ToolCard({ title, description, href }: ToolCardProps) {
         }}
       >
         <Stack gap="sm">
+          {Icon && (
+            <Icon size={32} style={{ color: '#F59E0B' }} />
+          )}
           <Title 
             order={3} 
             style={{ 

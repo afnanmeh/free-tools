@@ -110,6 +110,7 @@ export default function DesignToolsPage() {
                     title={tool.name}
                     description={tool.description}
                     href={tool.path}
+                    iconName={tool.id}
                   />
                 ))}
               </SimpleGrid>

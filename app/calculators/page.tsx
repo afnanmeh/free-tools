@@ -113,6 +113,7 @@ export default function CalculatorsPage() {
                     title={tool.name}
                     description={tool.description}
                     href={tool.path}
+                    iconName={tool.id}
                   />
                 ))}
               </SimpleGrid>
