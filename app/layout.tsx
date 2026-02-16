@@ -1,10 +1,10 @@
 import "@mantine/core/styles.css";
 import "./globals.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import { theme } from "@/config/theme";
+import { ColorSchemeScript } from "@mantine/core";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://toolsey.org"),
@@ -159,12 +159,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>
+        <ThemeProvider>
           {children}
           <Analytics />
 
           <Footer />
-        </MantineProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

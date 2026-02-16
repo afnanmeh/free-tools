@@ -70,11 +70,8 @@ export default function DevToolsPage() {
       <main>
       {/* Left-Right Hero Section */}
       <Box
+        className="tool-hero"
         style={{
-          background: 'rgba(26,26,26,0.6)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          border: '1px solid rgba(255,255,255,0.1)',
           borderRadius: '16px',
           padding: '2rem',
           marginBottom: '2.5rem',
@@ -84,14 +81,14 @@ export default function DevToolsPage() {
       >
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
           <Stack gap="md">
-            <h1 id="dev-tools-hero" style={{ color: '#fff', fontWeight: 900, letterSpacing: '-0.5px', fontSize: '2rem', margin: 0 }}>
+            <h1 id="dev-tools-hero" style={{ fontWeight: 900, letterSpacing: '-0.5px', fontSize: '2rem', margin: 0 }}>
               Fast, Private, In-Browser Developer Utilities
             </h1>
-            <Text style={{ color: '#aaa', lineHeight: 1.7 }}>
+            <Text className="tool-hero-text" style={{ lineHeight: 1.7 }}>
               Speed up your workflow with JSON formatters, JWT decoders, regex testers, and code minifiers. All
               operations run securely in your browser for maximum privacy and zero server round-trips.
             </Text>
-            <ul style={{ color: '#ccc', lineHeight: 1.8, paddingLeft: '1.1rem', margin: 0 }}>
+            <ul style={{ lineHeight: 1.8, paddingLeft: '1.1rem', margin: 0 }}>
               <li>JSON tools: formatter, validator, converter, and viewer</li>
               <li>Security helpers: JWT decoder and header/payload inspector</li>
               <li>Code utilities: CSS/JS/HTML formatting and minification</li>
@@ -100,23 +97,22 @@ export default function DevToolsPage() {
           </Stack>
 
           <Box
+            className="home-card"
             style={{
-              background: 'rgba(26,26,26,0.6)',
-              border: '1px solid rgba(255,255,255,0.1)',
               borderRadius: '14px',
               overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'flex', gap: 8, padding: 14, background: '#0f0f0f', borderBottom: '1px solid #2a2a2a' }}>
+            <div className="dashboardHeader" style={{ display: 'flex', gap: 8, padding: 14 }}>
               <div style={{ padding: '6px 12px', borderRadius: 8, background: '#F59E0B', color: '#000', fontWeight: 700, fontSize: 12 }}>JSON</div>
-              <div style={{ padding: '6px 12px', borderRadius: 8, background: '#1a1a1a', color: '#aaa', fontWeight: 600, fontSize: 12 }}>Output</div>
+              <div className="dashboardTab" style={{ padding: '6px 12px', borderRadius: 8, fontWeight: 600, fontSize: 12 }}>Output</div>
             </div>
-            <div style={{ padding: 20, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
-              <div style={{ color: '#F59E0B' }}>{'{'}</div>
-              <div style={{ color: '#F59E0B' }}>  "name": "Free Tools",</div>
-              <div style={{ color: '#F59E0B' }}>  "feature": "developer-utilities",</div>
-              <div style={{ color: '#F59E0B' }}>  "privacy": true</div>
-              <div style={{ color: '#F59E0B' }}>{'}'}</div>
+            <div className="dashboardContent" style={{ padding: 20, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
+              <div className="codeLine">{'{'}</div>
+              <div className="codeLine">  "name": "Free Tools",</div>
+              <div className="codeLine">  "feature": "developer-utilities",</div>
+              <div className="codeLine">  "privacy": true</div>
+              <div className="codeLine">{'}'}</div>
             </div>
           </Box>
         </SimpleGrid>
@@ -130,8 +126,8 @@ export default function DevToolsPage() {
             <Stack gap="lg" mb="xl">
               <h2 
                 id={`subcategory-${subcategory.id}`}
+                className="home-section-title"
                 style={{ 
-                  color: '#fff',
                   fontSize: '2rem',
                   fontWeight: 800,
                   margin: 0,
@@ -139,7 +135,7 @@ export default function DevToolsPage() {
               >
                 {subcategory.icon} {subcategory.name}
               </h2>
-              <Text style={{ color: '#999', fontSize: '1.1rem' }}>
+              <Text className="home-section-text" style={{ fontSize: '1.1rem' }}>
                 {subcategory.description}
               </Text>
             </Stack>

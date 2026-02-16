@@ -63,21 +63,22 @@ export function HeaderDropdown({ categoryId, categoryName, categoryPath }: Heade
     >
       <Link href={categoryPath} style={{ textDecoration: 'none' }}>
         <Group gap="xs" style={{ cursor: 'pointer' }}>
-          <Text style={{ 
-            color: '#ffffff', 
-            fontSize: '14px', 
-            fontWeight: 500, 
-            transition: 'color 0.2s ease',
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#F59E0B'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
+          <Text 
+            className="header-nav-text"
+            style={{ 
+              fontSize: '14px', 
+              fontWeight: 500, 
+              transition: 'color 0.2s ease',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#F59E0B'}
+            onMouseLeave={(e) => e.currentTarget.className = 'header-nav-text'}
           >
             {categoryName}
           </Text>
           <IconChevronDown 
             size={14} 
+            className="header-nav-text"
             style={{ 
-              color: '#ffffff', 
               transition: 'transform 0.2s ease',
               transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
             }} 
@@ -87,6 +88,7 @@ export function HeaderDropdown({ categoryId, categoryName, categoryPath }: Heade
 
       {isOpen && (
         <Box
+          className="header-dropdown-menu"
           style={{
             position: 'absolute',
             top: '100%',
@@ -94,7 +96,6 @@ export function HeaderDropdown({ categoryId, categoryName, categoryPath }: Heade
             transform: 'translateX(-50%)',
             marginTop: '0px',
             paddingTop: '6px',
-            backgroundColor: '#03060C',
             border: '1px solid rgba(245, 158, 11, 0.3)',
             borderRadius: '2rem',
             padding: '1.5rem',
@@ -144,12 +145,13 @@ export function HeaderDropdown({ categoryId, categoryName, categoryPath }: Heade
                         {Icon && (
                           <Icon
                             size={22}
-                            style={{ color: '#F59E0B', marginBottom: '0.5rem' }}
+                            className="text-orange"
+                            style={{ marginBottom: '0.5rem' }}
                           />
                         )}
                         <Text
+                          className="text-white"
                           style={{
-                            color: '#ffffff',
                             fontSize: '13px',
                             fontWeight: 700,
                             lineHeight: 1.3,
@@ -159,8 +161,8 @@ export function HeaderDropdown({ categoryId, categoryName, categoryPath }: Heade
                           {tool!.name}
                         </Text>
                         <Text
+                          className="text-gray-400"
                           style={{
-                            color: '#ffffff',
                             fontSize: '11px',
                             lineHeight: 1.4,
                           }}

@@ -8,7 +8,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ backgroundColor: '#03060C', borderTop: '1px solid #222', padding: '4rem 0 2rem' }}>
+    <footer className="footer-container" style={{ padding: '4rem 0 2rem' }}>
       <Container size="xl">
         
         <Stack gap="3rem">
@@ -16,72 +16,72 @@ export function Footer() {
             <Stack gap="md">
               <Flex align="center" justify="flex-start" gap="sm">
                 <IconSettings size={30} color="#F59E0B" />
-                <Text style={{ color: '#F59E0B', fontWeight: 900, fontSize: '1.2rem', }}>
+                <Text className="footer-brand" style={{ fontWeight: 900, fontSize: '1.2rem', }}>
                   TOOLSEY
                 </Text>
               </Flex>
-              <Text style={{ color: '#aaaaaa', fontSize: '0.95rem', lineHeight: 1.6 }}>
+              <Text className="footer-text" style={{ fontSize: '0.95rem', lineHeight: 1.6 }}>
                 95 free online tools for developers, marketers, and designers. No signup required.
               </Text>
             </Stack>
 
             <Stack gap="sm" className="footer-column">
-              <Text style={{ color: '#ffffff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
+              <Text className="footer-heading" style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
                 CATEGORIES
               </Text>
               <Link href="/dev-tools" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Developer Tools</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Developer Tools</Text>
               </Link>
               <Link href="/seo-marketing" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">SEO & Marketing</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>SEO & Marketing</Text>
               </Link>
               <Link href="/calculators" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Calculators</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Calculators</Text>
               </Link>
               <Link href="/design-tools" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Design Tools</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Design Tools</Text>
               </Link>
             </Stack>
 
             <Stack gap="sm" className="footer-column">
-              <Text style={{ color: '#ffffff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
+              <Text className="footer-heading" style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
                 POPULAR TOOLS
               </Text>
               <Link href="/dev-tools/json-tools/json-formatter" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">JSON Formatter</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>JSON Formatter</Text>
               </Link>
               <Link href="/dev-tools/jwt-security/jwt-decoder" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">JWT Decoder</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>JWT Decoder</Text>
               </Link>
               <Link href="/seo-marketing/utm-campaign/utm-builder" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">UTM Builder</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>UTM Builder</Text>
               </Link>
               <Link href="/calculators/saas-startup/mrr-calculator" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">MRR Calculator</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>MRR Calculator</Text>
               </Link>
             </Stack>
 
             <Stack gap="sm" className="footer-column">
-              <Text style={{ color: '#ffffff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
+              <Text className="footer-heading" style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.5rem' }}>
                 ABOUT
               </Text>
               <Link href="/privacy" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Privacy Policy</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Privacy Policy</Text>
               </Link>
               <Link href="/terms" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Terms of Service</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Terms of Service</Text>
               </Link>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Contact</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Contact</Text>
               </Link>
-                <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }} className="footer-link">Blog</Text>
+                <Text className="footer-link" style={{ fontSize: '0.9rem' }}>Blog</Text>
             </Stack>
 
             
           </SimpleGrid>
           
 
-          <div style={{ borderTop: '1px solid #222', paddingTop: '2rem', position: 'relative', overflow: 'hidden' }}>
+          <div className="footer-bottom" style={{ paddingTop: '2rem', position: 'relative', overflow: 'hidden' }}>
             {/* Static gray gear icon */}
             <Flex
               align="center"
@@ -96,11 +96,9 @@ export function Footer() {
             >
               <IconSettings
                 size={320}
-                style={{
-                  color: '#aaaaaa',
-                }}
+                className="footer-icon"
               />
-              <Text style={{ color: '#aaaaaa', fontSize: '10rem', fontWeight: 900 }}>
+              <Text className="footer-watermark" style={{ fontSize: '10rem', fontWeight: 900 }}>
                 TOOLSEY
               </Text>
             </Flex>
@@ -108,7 +106,7 @@ export function Footer() {
 
 
             <Group justify="flex-end" style={{ position: 'relative', zIndex: 1 }}>
-              <Text style={{ color: '#aaaaaa', fontSize: '0.9rem' }}>
+              <Text className="footer-text" style={{ fontSize: '0.9rem' }}>
                 &copy; {currentYear} toolsey. All rights reserved.
               </Text>
  

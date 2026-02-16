@@ -30,25 +30,22 @@ export default function CalculatorsPage() {
       <Stack gap="xl">
         {/* Left-Right Hero Section */}
         <Box
+          className="tool-hero"
           style={{
-            background: 'rgba(26,26,26,0.6)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: '16px',
             padding: '2rem',
           }}
         >
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="md">
-              <Title order={2} style={{ color: '#fff', fontWeight: 900, letterSpacing: '-0.5px' }}>
+              <Title order={2} style={{ fontWeight: 900, letterSpacing: '-0.5px' }}>
                 Business calculators that guide smarter decisions
               </Title>
-              <Text style={{ color: '#aaa', lineHeight: 1.7 }}>
+              <Text className="tool-hero-text" style={{ lineHeight: 1.7 }}>
                 Model subscriptions, pricing, and marketing ROI in seconds. Get instant MRR, churn, LTV, and payback
                 insights without spreadsheets—right in your browser.
               </Text>
-              <ul style={{ color: '#ccc', lineHeight: 1.8, paddingLeft: '1.1rem', margin: 0 }}>
+              <ul style={{ lineHeight: 1.8, paddingLeft: '1.1rem', margin: 0 }}>
                 <li>SaaS metrics: MRR, ARR, churn rate, and LTV</li>
                 <li>Pricing and break-even sensitivity calculators</li>
                 <li>CAC, payback period, and ROI estimators</li>
@@ -57,18 +54,17 @@ export default function CalculatorsPage() {
             </Stack>
 
             <Box
+              className="home-card"
               style={{
-                background: 'rgba(26,26,26,0.6)',
-                border: '1px solid rgba(255,255,255,0.1)',
                 borderRadius: '14px',
                 overflow: 'hidden',
               }}
             >
-              <div style={{ display: 'flex', gap: 8, padding: 14, background: '#0f0f0f', borderBottom: '1px solid #2a2a2a' }}>
+              <div className="dashboardHeader" style={{ display: 'flex', gap: 8, padding: 14 }}>
                 <div style={{ padding: '6px 12px', borderRadius: 8, background: '#77b40d', color: '#000', fontWeight: 700, fontSize: 12 }}>SaaS Metrics</div>
-                <div style={{ padding: '6px 12px', borderRadius: 8, background: '#1a1a1a', color: '#aaa', fontWeight: 600, fontSize: 12 }}>KPIs</div>
+                <div className="dashboardTab" style={{ padding: '6px 12px', borderRadius: 8, fontWeight: 600, fontSize: 12 }}>KPIs</div>
               </div>
-              <div style={{ padding: 20, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
+              <div className="dashboardContent" style={{ padding: 20, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
                 <div style={{ color: '#77b40d' }}>MRR: $24,500</div>
                 <div style={{ color: '#77b40d' }}>Churn: 2.3%</div>
                 <div style={{ color: '#77b40d' }}>LTV: $1,980</div>

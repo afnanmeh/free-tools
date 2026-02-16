@@ -16,11 +16,8 @@ function PopularToolCard({ title, description, href, icon: Icon, category }: Pop
   return (
     <Link href={href} style={{ textDecoration: 'none' }}>
       <Box
+        className="home-card"
         style={{
-          background: 'rgba(26, 26, 26, 0.6)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
           borderRadius: '1rem',
           padding: '1.5rem',
           cursor: 'pointer',
@@ -28,16 +25,10 @@ function PopularToolCard({ title, description, href, icon: Icon, category }: Pop
           height: '100%',
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.background = 'rgba(26, 26, 26, 0.8)';
-          e.currentTarget.style.borderColor = 'rgba(245, 158, 11, 0.4)';
           e.currentTarget.style.transform = 'translateY(-4px)';
-          e.currentTarget.style.boxShadow = '0 12px 40px rgba(245, 158, 11, 0.15)';
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.background = 'rgba(26, 26, 26, 0.6)';
-          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
           e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = 'none';
         }}
       >
         <Stack gap="md">
@@ -73,8 +64,8 @@ function PopularToolCard({ title, description, href, icon: Icon, category }: Pop
           {/* Title */}
           <Title
             order={3}
+            className="home-card-title"
             style={{
-              color: '#ffffff',
               fontWeight: 800,
               fontSize: '1.25rem',
               letterSpacing: '-0.5px',
@@ -86,8 +77,8 @@ function PopularToolCard({ title, description, href, icon: Icon, category }: Pop
 
           {/* Description */}
           <Text
+            className="home-card-desc"
             style={{
-              color: '#aaaaaa',
               fontSize: '0.95rem',
               lineHeight: 1.6,
             }}
@@ -162,8 +153,8 @@ export function PopularToolsSection() {
 
   return (
     <section
+      className="home-section"
       style={{
-        backgroundColor: '#03060C',
         padding: '6rem 0',
         position: 'relative',
       }}
@@ -186,10 +177,10 @@ export function PopularToolsSection() {
             </Text>
             <Title
               order={2}
+              className="home-section-title"
               style={{
                 fontSize: '3rem',
                 fontWeight: 900,
-                color: '#ffffff',
                 lineHeight: 1.2,
                 marginBottom: '1rem',
                 letterSpacing: '-1px',
@@ -209,9 +200,9 @@ export function PopularToolsSection() {
               </span>
             </Title>
             <Text
+              className="home-section-text"
               style={{
                 fontSize: '1.125rem',
-                color: '#aaaaaa',
                 lineHeight: 1.6,
               }}
             >

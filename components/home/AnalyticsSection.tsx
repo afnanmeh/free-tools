@@ -15,19 +15,16 @@ interface MetricCardProps {
 function MetricCard({ label, value, change, isPositive, color }: MetricCardProps) {
   return (
     <Box
+      className="home-card"
       style={{
         padding: '1.25rem',
-        background: 'rgba(26, 26, 26, 0.6)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
         borderRadius: '0.75rem',
       }}
     >
       <Text
+        className="home-card-desc"
         style={{
           fontSize: '0.875rem',
-          color: '#aaaaaa',
           marginBottom: '0.5rem',
           fontWeight: 600,
         }}
@@ -36,10 +33,10 @@ function MetricCard({ label, value, change, isPositive, color }: MetricCardProps
       </Text>
       <Group gap="sm" align="baseline">
         <Text
+          className="home-card-title"
           style={{
             fontSize: '2rem',
             fontWeight: 900,
-            color: '#ffffff',
             lineHeight: 1,
           }}
         >
@@ -239,8 +236,8 @@ export function AnalyticsSection() {
 
   return (
     <section
+      className="home-section"
       style={{
-        backgroundColor: '#03060C',
         padding: '6rem 0',
         position: 'relative',
       }}
@@ -263,10 +260,10 @@ export function AnalyticsSection() {
             </Text>
             <Title
               order={2}
+              className="home-section-title"
               style={{
                 fontSize: '3rem',
                 fontWeight: 900,
-                color: '#ffffff',
                 lineHeight: 1.2,
                 marginBottom: '1rem',
                 letterSpacing: '-1px',
@@ -285,9 +282,9 @@ export function AnalyticsSection() {
               </span>
             </Title>
             <Text
+              className="home-section-text"
               style={{
                 fontSize: '1.125rem',
-                color: '#aaaaaa',
                 lineHeight: 1.6,
               }}
             >
@@ -304,11 +301,8 @@ export function AnalyticsSection() {
 
           {/* Chart Container */}
           <Box
+            className="chart-container"
             style={{
-              background: 'rgba(26, 26, 26, 0.6)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
               borderRadius: '1rem',
               padding: '2rem',
               marginTop: '1rem',

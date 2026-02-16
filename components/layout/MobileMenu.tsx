@@ -52,6 +52,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
       {/* Mobile Menu Drawer */}
       <Box
+        className="mobile-menu-drawer"
         style={{
           position: 'fixed',
           top: 0,
@@ -59,7 +60,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           width: '85%',
           maxWidth: '400px',
           height: '100vh',
-          backgroundColor: '#03060C',
           zIndex: 2000,
           transition: 'right 0.3s ease',
           overflowY: 'auto',
@@ -77,8 +77,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           }}
         >
           <Text
+            className="tool-text-primary"
             style={{
-              color: '#ffffff',
               fontSize: '18px',
               fontWeight: 800,
             }}
@@ -87,7 +87,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Text>
           <IconX
             size={24}
-            style={{ color: '#ffffff', cursor: 'pointer' }}
+            className="tool-text-primary"
+            style={{ cursor: 'pointer' }}
             onClick={onClose}
           />
         </Box>
@@ -117,8 +118,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   onClick={() => toggleCategory(category.id)}
                 >
                   <Text
+                    className="tool-text-primary"
                     style={{
-                      color: '#ffffff',
                       fontSize: '14px',
                       fontWeight: 700,
                     }}
@@ -226,8 +227,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               }}
             >
               <Text
+                className="tool-text-primary"
                 style={{
-                  color: '#ffffff',
                   fontSize: '14px',
                   fontWeight: 700,
                 }}
@@ -258,7 +259,7 @@ export function MobileBurgerButton({ onClick }: { onClick: () => void }) {
       }}
       aria-label="Open menu"
     >
-      <IconMenu2 size={24} style={{ color: '#ffffff' }} />
+      <IconMenu2 size={24} className="mobile-burger-icon" />
     </button>
   );
 }

@@ -11,9 +11,9 @@ interface ToolLayoutProps {
 export function ToolLayout({ children }: ToolLayoutProps) {
   return (
     <Box 
+      className="pageWrapper"
       style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%)',
         position: 'relative',
       }}
     >

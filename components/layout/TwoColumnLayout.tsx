@@ -25,7 +25,7 @@ export function TwoColumnLayout({ leftColumn, rightColumn, leftTitle, rightTitle
       {/* Left Column - Input */}
       <Stack gap="md" style={{ position: 'sticky', top: '2rem', maxHeight: 'calc(100vh - 4rem)', overflow: 'auto' }}>
         {leftTitle && (
-          <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.5px' }}>
+          <div className="tool-text-primary" style={{ fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.5px' }}>
             {leftTitle}
           </div>
         )}
@@ -35,7 +35,7 @@ export function TwoColumnLayout({ leftColumn, rightColumn, leftTitle, rightTitle
       {/* Right Column - Output */}
       <Stack gap="md" style={{ position: 'sticky', top: '2rem', maxHeight: 'calc(100vh - 4rem)', overflow: 'auto' }}>
         {rightTitle && (
-          <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.5px' }}>
+          <div className="tool-text-primary" style={{ fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.5px' }}>
             {rightTitle}
           </div>
         )}

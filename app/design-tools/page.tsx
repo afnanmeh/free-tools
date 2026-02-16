@@ -30,25 +30,22 @@ export default function DesignToolsPage() {
       <Stack gap="xl">
         {/* Left-Right Hero Section */}
         <Box
+          className="tool-hero"
           style={{
-            background: 'rgba(26,26,26,0.6)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: '16px',
             padding: '2rem',
           }}
         >
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="md">
-              <Title order={2} style={{ color: '#fff', fontWeight: 900, letterSpacing: '-0.5px' }}>
+              <Title order={2} style={{ fontWeight: 900, letterSpacing: '-0.5px' }}>
                 Design faster with accessible color tools
               </Title>
-              <Text style={{ color: '#aaa', lineHeight: 1.7 }}>
+              <Text className="tool-hero-text" style={{ lineHeight: 1.7 }}>
                 Build palettes, validate contrast, and preview gradients—without switching tabs. Ensure WCAG compliance
                 and craft visuals that look great in dark and light themes.
               </Text>
-              <ul style={{ color: '#ccc', lineHeight: 1.8, paddingLeft: '1.1rem', margin: 0 }}>
+              <ul style={{ lineHeight: 1.8, paddingLeft: '1.1rem', margin: 0 }}>
                 <li>Palette generator with harmony rules and export</li>
                 <li>WCAG contrast checker for AA/AAA compliance</li>
                 <li>CSS gradient previewer and code export</li>
@@ -57,9 +54,8 @@ export default function DesignToolsPage() {
             </Stack>
 
             <Box
+              className="home-card"
               style={{
-                background: 'rgba(26,26,26,0.6)',
-                border: '1px solid rgba(255,255,255,0.1)',
                 borderRadius: '14px',
                 overflow: 'hidden',
               }}

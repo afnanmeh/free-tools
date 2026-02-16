@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { HeaderDropdown } from '@/components/layout/HeaderDropdown';
 import { MobileMenu, MobileBurgerButton } from '@/components/layout/MobileMenu';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { useState, useEffect } from 'react';
 
 export function SiteHeader() {
@@ -33,11 +34,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header style={{ 
-        backgroundColor: isScrolled ? 'rgba(3, 6, 12, 0.8)' : 'transparent',
-        backdropFilter: isScrolled ? 'blur(12px)' : 'none',
-        WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'none',
-        borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+      <header className={isScrolled ? 'header-scrolled' : 'header-top'} style={{ 
         padding: '1rem 0',
         position: 'fixed',
         top: 0,
@@ -53,8 +50,8 @@ export function SiteHeader() {
               <Logo size={50} />
               <Title 
                 order={3} 
+                className="header-title"
                 style={{ 
-                  color: '#ffffff',
                   fontWeight: 800,
                   fontSize: '20px',
                   letterSpacing: '-0.5px',
@@ -95,39 +92,43 @@ export function SiteHeader() {
               />
             </Group>
 
-            {/* Desktop CTA Button - Hidden on mobile */}
-            <Link href="/contact" style={{ textDecoration: 'none', display: 'none' }} className="desktop-cta">
-              <button
-                style={{
-                  backgroundColor: '#F59E0B',
-                  color: '#ffffff',
-                  border: 'none',
-                  padding: '0.75rem 1.5rem',
-                  borderRadius: '83rem',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(245, 158, 11, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#F59E0B';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(245, 158, 11, 0.3)';
-                }}
-              >
-                Try for free
-              </button>
-            </Link>
+            {/* Theme Toggle and Desktop CTA */}
+            <Group gap="md" style={{ display: 'none' }} className="desktop-actions">
+              <ThemeToggle />
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <button
+                  style={{
+                    backgroundColor: '#F59E0B',
+                    color: '#ffffff',
+                    border: 'none',
+                    padding: '0.75rem 1.5rem',
+                    borderRadius: '83rem',
+                    fontSize: '14px',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 6px 16px rgba(245, 158, 11, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#F59E0B';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(245, 158, 11, 0.3)';
+                  }}
+                >
+                  Try for free
+                </button>
+              </Link>
+            </Group>
 
-            {/* Mobile Burger Button - Visible only on mobile */}
-            <div style={{ display: 'none' }} className="mobile-burger">
+            {/* Mobile Actions - Theme Toggle + Burger */}
+            <Group gap="sm" style={{ display: 'none' }} className="mobile-actions">
+              <ThemeToggle />
               <MobileBurgerButton onClick={() => setIsMobileMenuOpen(true)} />
-            </div>
+            </Group>
           </Group>
         </Container>
       </header>
@@ -141,10 +142,10 @@ export function SiteHeader() {
           .desktop-nav {
             display: flex !important;
           }
-          .desktop-cta {
-            display: block !important;
+          .desktop-actions {
+            display: flex !important;
           }
-          .mobile-burger {
+          .mobile-actions {
             display: none !important;
           }
         }
@@ -153,11 +154,11 @@ export function SiteHeader() {
           .desktop-nav {
             display: none !important;
           }
-          .desktop-cta {
+          .desktop-actions {
             display: none !important;
           }
-          .mobile-burger {
-            display: block !important;
+          .mobile-actions {
+            display: flex !important;
           }
         }
       `}</style>

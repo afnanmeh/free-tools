@@ -4,6 +4,13 @@ import { useEffect, useRef } from 'react';
 
 export function MinimalCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  
+  // Detect current theme
+  const getTheme = () => {
+    if (typeof window === 'undefined') return 'light';
+    const root = document.querySelector('[data-color-scheme]');
+    return root?.getAttribute('data-color-scheme') || 'light';
+  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -61,6 +68,9 @@ export function MinimalCanvas() {
     }
 
     function drawConnections() {
+      const theme = getTheme();
+      const strokeColor = theme === 'light' ? '#ffb366' : '#ffffff'; // Light orange for light theme, white for dark
+      
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -69,7 +79,7 @@ export function MinimalCanvas() {
 
           if (distance < 180) { // connect only close particles
             ctx!.globalAlpha = (1 - distance / 180) * 0.5; // subtle line
-            ctx!.strokeStyle = '#ffffff';
+            ctx!.strokeStyle = strokeColor;
             ctx!.lineWidth = 0.5;
             ctx!.beginPath();
             ctx!.moveTo(particles[i].x, particles[i].y);
@@ -105,6 +115,7 @@ export function MinimalCanvas() {
   return (
     <canvas
       ref={canvasRef}
+      className="hero-canvas"
       style={{
         position: 'absolute',
         top: 0,
@@ -112,7 +123,6 @@ export function MinimalCanvas() {
         width: '100%',
         height: '100%',
         zIndex: 0,
-        background: '#03060c', // solid background
       }}
     />
   );

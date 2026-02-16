@@ -10,27 +10,18 @@ interface StatCardProps {
 function StatCard({ value, label }: StatCardProps) {
   return (
     <Box
+      className="home-card"
       style={{
         textAlign: 'center',
         padding: '2rem 1.5rem',
-        background: 'rgba(26, 26, 26, 0.6)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
         borderRadius: '1rem',
         transition: 'all 0.3s ease',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = 'rgba(26, 26, 26, 0.8)';
-        e.currentTarget.style.borderColor = 'rgba(245, 158, 11, 0.4)';
         e.currentTarget.style.transform = 'translateY(-4px)';
-        e.currentTarget.style.boxShadow = '0 12px 40px rgba(245, 158, 11, 0.15)';
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = 'rgba(26, 26, 26, 0.6)';
-        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
         e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = 'none';
       }}
     >
       <Text
@@ -49,9 +40,9 @@ function StatCard({ value, label }: StatCardProps) {
         {value}
       </Text>
       <Text
+        className="home-card-desc"
         style={{
           fontSize: '0.95rem',
-          color: '#aaaaaa',
           fontWeight: 600,
           textTransform: 'uppercase',
           letterSpacing: '0.5px',
@@ -73,8 +64,8 @@ export function ImpactSection() {
 
   return (
     <section
+      className="home-section"
       style={{
-        backgroundColor: '#03060C',
         padding: '6rem 0',
         position: 'relative',
       }}
@@ -98,10 +89,10 @@ export function ImpactSection() {
               </Text>
               <Title
                 order={2}
+                className="home-section-title"
                 style={{
                   fontSize: '3rem',
                   fontWeight: 900,
-                  color: '#ffffff',
                   lineHeight: 1.2,
                   marginBottom: '1rem',
                   letterSpacing: '-1px',
@@ -112,9 +103,9 @@ export function ImpactSection() {
                 click by click
               </Title>
               <Text
+                className="home-section-text"
                 style={{
                   fontSize: '1.125rem',
-                  color: '#aaaaaa',
                   lineHeight: 1.6,
                 }}
               >

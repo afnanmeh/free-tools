@@ -96,6 +96,9 @@ function HeroSection() {
                   setHighlight(-1);
                 }}
                 aria-label="Search tools"
+                classNames={{
+                  input: "search-input",
+                }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
                     if (highlight >= 0) goToIndex(highlight);
@@ -112,17 +115,6 @@ function HeroSection() {
                     setQuery("");
                     setHighlight(-1);
                   }
-                }}
-                styles={{
-                  input: {
-                    background: "rgba(18,18,20,0.55)",
-                    backdropFilter: "blur(8px)",
-                    WebkitBackdropFilter: "blur(8px)",
-                    borderColor: "rgba(255,255,255,0.12)",
-                    boxShadow:
-                      "0 8px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(245,158,11,0.18)",
-                    color: "#fff",
-                  },
                 }}
                 rightSection={
                   <Button
@@ -149,19 +141,15 @@ function HeroSection() {
               {query && results.length > 0 && (
                 <Paper
                   withBorder
+                  className="search-results"
                   style={{
                     position: "absolute",
                     top: "100%",
                     left: 0,
                     right: 0,
-                    background: "rgba(10,10,12,0.92)",
-                    backdropFilter: "blur(10px)",
-                    WebkitBackdropFilter: "blur(10px)",
-                    borderColor: "rgba(255,255,255,0.08)",
                     marginTop: 8,
                     maxHeight: "15rem",
                     borderRadius: "1rem",
-                    boxShadow: "0 16px 48px rgba(0,0,0,0.5)",
                     overflowY: "auto",
                     msOverflowStyle: "none",
                   }}
@@ -174,6 +162,7 @@ function HeroSection() {
                       onMouseLeave={() =>
                         setHoveredId((id) => (id === tool.id ? null : id))
                       }
+                      className={`search-result-item ${highlight === i || hoveredId === tool.id ? 'highlighted' : ''}`}
                       style={{
                         display: "block",
                         width: "100%",
@@ -181,22 +170,16 @@ function HeroSection() {
                         border: "none",
                         padding: "12px 14px",
                         cursor: "pointer",
-                        borderLeft:
-                          highlight === i || hoveredId === tool.id
-                            ? "3px solid #F59E0B"
-                            : "3px solid transparent",
-                        background:
-                          highlight === i || hoveredId === tool.id
-                            ? "rgba(245,158,11,0.08)"
-                            : "transparent",
+                        borderLeft: "3px solid transparent",
                       }}
                     >
                       <div
-                        style={{ color: "#fff", fontWeight: 700, fontSize: 14 }}
+                        className="search-result-name"
+                        style={{ fontWeight: 700, fontSize: 14 }}
                       >
                         {tool.name}
                       </div>
-                      <div style={{ color: "#aaa", fontSize: 12 }}>
+                      <div className="search-result-desc" style={{ fontSize: 12 }}>
                         {tool.description}
                       </div>
                     </button>
