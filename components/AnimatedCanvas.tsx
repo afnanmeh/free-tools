@@ -1,16 +1,11 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useTheme } from './ThemeProvider';
 
 export function MinimalCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  
-  // Detect current theme
-  const getTheme = () => {
-    if (typeof window === 'undefined') return 'light';
-    const root = document.querySelector('[data-color-scheme]');
-    return root?.getAttribute('data-color-scheme') || 'light';
-  };
+  const { colorScheme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -68,8 +63,7 @@ export function MinimalCanvas() {
     }
 
     function drawConnections() {
-      const theme = getTheme();
-      const strokeColor = theme === 'light' ? '#ffb366' : '#ffffff'; // Light orange for light theme, white for dark
+      const strokeColor = colorScheme === 'light' ? '#ffb366' : '#ffffff'; // Light orange for light theme, white for dark
       
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -110,12 +104,16 @@ export function MinimalCanvas() {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
+  }, [colorScheme]); // Re-run animation when theme changes
+
+  const canvasBackground = colorScheme === 'light' 
+    ? 'radial-gradient(circle at 20% 30%, rgba(252, 196, 150, 0.18), transparent 55%), radial-gradient(circle at 80% 70%, rgba(255, 160, 200, 0.10), transparent 60%), #ffffff'
+    : '#03060c';
 
   return (
     <canvas
+      key={colorScheme}
       ref={canvasRef}
-      className="hero-canvas"
       style={{
         position: 'absolute',
         top: 0,
@@ -123,6 +121,7 @@ export function MinimalCanvas() {
         width: '100%',
         height: '100%',
         zIndex: 0,
+        background: canvasBackground,
       }}
     />
   );
